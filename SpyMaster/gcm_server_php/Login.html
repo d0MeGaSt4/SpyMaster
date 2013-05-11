@@ -1,0 +1,79 @@
+<HTML>
+    <HEAD>
+        <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+        <TITLE>Login</TITLE>
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script language="javascript" type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+        <script language="javascript" type="text/javascript" src="http://http://twitter-bootstrap.node1.zygote.cc/js/bootstrap-alerts.js"></script>
+        <!-- Initializing a form object. --> 
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript">
+            $(function()
+            {
+                $('#form').validate(
+                        {
+                            rules: {
+                                txtName: {
+                                    required: true
+                                },
+                                txtPhoneno: {
+                                    required: true,
+                                    number: true
+                                },
+                                txtEmail: {
+                                    required: true
+                                }
+                            },
+                            errorPlacement: function(error, element) {
+                                element.css('background', '#ffdddd');
+                            }
+                        });
+            });
+        </script>
+    </head>
+    <body >
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <ul class="nav nav-pills ">
+            <li class="active"><a href="index.html">Spymaster System</a></li>
+            <li><a href="contactus.html"> Contact Us</a></li>
+            <li><a href="AboutUs.html">About</a></li>
+        </ul>
+        <br/>
+        <br/>
+    <center>  <img src="bootstrap/img/Spymaster.jpg" class="img-circle"> </center>
+    <br/>
+    <form NAME="frmLogin" ACTION="index1.php" METHOD="post" id="form">
+        <fieldset>
+            <div class="text-center">
+                <label class="text-center" for="txtName">Name </label>
+                <div class="text-center">
+                    <input type="text" id="txtName" name ="txtName" placeholder="Name" >
+                </div>
+            </div>
+            <div class="text-center">
+                <label class="text-center" for="txtEmail">Email</label>
+                <div class="text-center">
+                    <input type="text" id="txtEmail" name ="txtEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="text-center">
+                <label class="text-center" for="txtPhoneno">Phone Number </label>
+                <div class="text-center">
+                    <input type="text" id="txtPhoneno" name ="txtPhoneno" placeholder="Phone number" >
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
